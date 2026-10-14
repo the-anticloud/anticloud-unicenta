@@ -1,0 +1,130 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:ad95c570-4051-5341-a1d4-1c6f1365a137",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-12T05:43:21Z",
+    "component": {
+      "type": "application",
+      "name": "UNICENTA",
+      "version": "9514fcadb867",
+      "bom-ref": "pkg:generic/anticloud/UNICENTA@9514fcadb867",
+      "purl": "pkg:generic/anticloud/UNICENTA@9514fcadb867",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "9514fcadb867e83f271a7d2dfb2f7f940ba9724c"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": ""
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "chart.js",
+      "version": "^3.7.1",
+      "purl": "pkg:npm/chart.js@^3.7.1",
+      "bom-ref": "npm/chart.js@^3.7.1"
+    },
+    {
+      "type": "library",
+      "name": "font-awesome",
+      "version": "^4.7.0",
+      "purl": "pkg:npm/font-awesome@^4.7.0",
+      "bom-ref": "npm/font-awesome@^4.7.0"
+    },
+    {
+      "type": "library",
+      "name": "axios",
+      "version": "^1.7.9",
+      "purl": "pkg:npm/axios@^1.7.9",
+      "bom-ref": "npm/axios@^1.7.9"
+    },
+    {
+      "type": "library",
+      "name": "bootstrap",
+      "version": "^4.0.0",
+      "purl": "pkg:npm/bootstrap@^4.0.0",
+      "bom-ref": "npm/bootstrap@^4.0.0"
+    },
+    {
+      "type": "library",
+      "name": "cross-env",
+      "version": "^7.0",
+      "purl": "pkg:npm/cross-env@^7.0",
+      "bom-ref": "npm/cross-env@^7.0"
+    },
+    {
+      "type": "library",
+      "name": "jquery",
+      "version": "^3.2",
+      "purl": "pkg:npm/jquery@^3.2",
+      "bom-ref": "npm/jquery@^3.2"
+    },
+    {
+      "type": "library",
+      "name": "laravel-mix",
+      "version": "^6.0.49",
+      "purl": "pkg:npm/laravel-mix@^6.0.49",
+      "bom-ref": "npm/laravel-mix@^6.0.49"
+    },
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "^4.17.19",
+      "purl": "pkg:npm/lodash@^4.17.19",
+      "bom-ref": "npm/lodash@^4.17.19"
+    },
+    {
+      "type": "library",
+      "name": "popper.js",
+      "version": "^1.12",
+      "purl": "pkg:npm/popper.js@^1.12",
+      "bom-ref": "npm/popper.js@^1.12"
+    },
+    {
+      "type": "library",
+      "name": "resolve-url-loader",
+      "version": "^5.0.0",
+      "purl": "pkg:npm/resolve-url-loader@^5.0.0",
+      "bom-ref": "npm/resolve-url-loader@^5.0.0"
+    },
+    {
+      "type": "library",
+      "name": "sass",
+      "version": "^1.20.1",
+      "purl": "pkg:npm/sass@^1.20.1",
+      "bom-ref": "npm/sass@^1.20.1"
+    },
+    {
+      "type": "library",
+      "name": "sass-loader",
+      "version": "^8.0.0",
+      "purl": "pkg:npm/sass-loader@^8.0.0",
+      "bom-ref": "npm/sass-loader@^8.0.0"
+    },
+    {
+      "type": "library",
+      "name": "vue-template-compiler",
+      "version": "^0.1.0",
+      "purl": "pkg:npm/vue-template-compiler@^0.1.0",
+      "bom-ref": "npm/vue-template-compiler@^0.1.0"
+    }
+  ]
+}
