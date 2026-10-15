@@ -1,245 +1,74 @@
 # UNICENTA
 
-**Category:** SUPERMARKETS
-**Status:** Active development with Anticloud overlay
+> Anticloud offline package — upstream: herbiehp/unicenta @ `master`.
 
 ## What This Project Does
 
-UNICENTA is an open-source project in the SUPERMARKETS category.
+uniCenta oPos repository
 
-This project provides tools, libraries, and functionality for developers
-and end users working in the SUPERMARKETS domain. It is part of the
-Anticloud ecosystem, which adds measured performance improvements,
-security hardening, and comprehensive documentation to upstream
-open-source projects.
+## Upstream README
 
-The project addresses key challenges in SUPERMARKETS by providing:
+Reference: uniCenta.com
+Author: Jack Gerrard
 
-- A well-tested, community-driven codebase
-- Standard interfaces compatible with the broader ecosystem
-- Documentation and examples for common use cases
-- Integration points for the Anticloud overlay improvements
+v3.81 Is a direct replacement for v3.80 - Apache Derby database driver rolled-back to 10.10
 
-## Installation
+v3.80 Is a deprecated release. No source code available.
+Apache Derby 10.11 caused known issue (Apache Derby forums) with Auto-Increment fields
 
-### Prerequisites
+********************************************************************************
 
-Before installing UNICENTA, ensure you have the following:
+v3.90 SOURCE CODE IS NOT AVAILABLE! 
 
-- A compatible operating system (Linux, macOS, or Windows)
-- Required build tools as specified by the upstream project
-- Runtime dependencies per the upstream requirements
+Use v3.81 if you do not need digital receipt functionality.
 
-### From Source
+posApps Digital Receipt plugin app' is totally independent of uniCenta oPOS and exists as a separate jar file. No uniCenta oPOS source code has been changed or  affected.
 
-To build from source, clone the repository and follow the
-upstream build instructions:
+THE ONLY DIFFERENCE BETWEEN V3.90 AND v3.81 IS THAT v3.90 IS DELIVERED WITH OUR posApps Digital Receipt plugin library jar and change to Ticket.Close script - which is available from http://www.posapps.io 
 
-See the upstream repository for build instructions.
 
-### Package Managers
+Please see - http://www.posapps.io for more information
 
-Depending on your platform, UNICENTA may be available
-through package managers such as apt, brew, or pip. Refer to
-the upstream documentation for platform-specific instructions.
+********************************************************************************
 
-## Usage
+3.81
+1.  Bug: Ticket and Pickup auto-numbering incrementing +100 on each restart 
+    Fix: Revert Apache Derby 10.11 derby.jar to version 10.10.2
 
-### Basic Usage
+3.80
+1.  Bug: Customer Find - Telephone SQL field criteria incorrect - returning PHONE2
+    Fix: Correct SQL statement to return PHONE
+2.  Bug: Categories Display Name in panel checkbox ineffective
+    Fix: Change getRootCategories SQL to only include CATSHOWNAME=1
+3.  Bug: Show Category in Panel check/un-check ineffective
+    Fix: Amend RootCategory method
+4.  Bug: script.linediscount rounding error
+    Fix: Remove Math(Rounding()) and replace with revised formula on LineTotal value
+5.  Bug: Free Sale line product add fails after upgrade
+    Fix: Change Installer SQL statement + supporting in-line code
+6.  Bug: Close Cash - Drawer Openings in MySQL not resetting
+    Fix: Change code to allow for TIMESTAMP differentails between DB's
+7.  Bug: JPanelTicket SouthComponent refresh error
+    Fix: Now conditional - John L
+8.  Bug: rpt:productsalesprofit - incompatible/incorrect SQL syntax causes report fail
+    Fix: redesign and replace complete report productsalesreport
+9.  Bug: Authorize.net Payment Gateway - attempt to get past intermittent submission fails.
+    Fix: Per latest Authorize.net //github repository + addition of messages (success/fails/refusals & etc).
+	 IMPORTANT: Only tested in developer Authorizenet Sandbox mode
+10. Bug: Customer Current Debt value not updating after ticket Payment form by Debt
+    Fix: PaymentInfo get and sets amended to fetch, display and write latest CurrentDebt value
+11. Bug: Customer Current Debt Date not updating after ticket Payment form by Debt
+    Fix: PaymentInfo get and sets amended to fetch, display and write latest CurrentDate value
+12. Bug: EAN-8/UPC-8 Barcode input not checked
+    Fix: Barcode checks for EAN-8/UPC-8 construct
 
-After installation, UNICENTA can be invoked as follows:
-
-```bash
-unicenta --help
-unicenta
-```
-
-### Common Operations
-
-1. **Initialization** - Set up the project environment and configuration
-2. **Execution** - Run the main functionality with appropriate parameters
-3. **Monitoring** - Check status and output during operation
-4. **Shutdown** - Cleanly terminate and save state
-
-### Examples
-
-```bash
-unicenta --input /path/to/input --output /path/to/output
-unicenta --config /path/to/config.yaml
-unicenta --verbose --log-level debug
-```
-
-## API
-
-### Overview
-
-UNICENTA exposes a standard API consistent with its category.
-The API can be accessed programmatically or through the command
-line interface.
-
-### Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /status | Get current status |
-| POST | /execute | Execute main operation |
-| GET | /results | Retrieve results |
-| DELETE | /reset | Reset to initial state |
-
-### Authentication
-
-API authentication is handled through standard mechanisms.
-Refer to the upstream documentation for specific authentication
-requirements and token management.
-
-### Rate Limiting
-
-The API implements rate limiting to prevent abuse. Default limits
-are configurable through the configuration file.
-
-## Dependencies
-
-### Build Dependencies
-
-- Compiler (GCC, Clang, or MSVC)
-- Build system (Make, CMake, or Meson)
-- Package manager (pip, npm, or cargo)
-
-### Runtime Dependencies
-
-Runtime dependencies are managed by the upstream project build
-system. Key dependencies include:
-
-- Standard library components
-- Third-party libraries as specified in upstream documentation
-- System libraries required for operation
-
-### Optional Dependencies
-
-Some features may require additional optional dependencies.
-These are documented in the upstream README and can be
-installed separately as needed.
-
-## Configuration
-
-### Configuration File
-
-UNICENTA uses a configuration file for runtime settings.
-The default location is typically:
-
-- **Linux/macOS:** ~/.config/unicenta/config.yaml
-- **Windows:** %APPDATA%\unicenta\config.yaml
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| log_level | string | info | Logging verbosity |
-| output_dir | string | ./output | Output directory |
-| max_workers | int | 4 | Maximum worker threads |
-| timeout | int | 30 | Operation timeout (seconds) |
-
-### Environment Variables
-
-The following environment variables can override configuration:
-
-- **UNICENTA_LOG_LEVEL** - Override log level
-- **UNICENTA_CONFIG** - Path to custom config file
-- **UNICENTA_OUTPUT** - Override output directory
-
-## Contributing
-
-Contributions to UNICENTA are welcome. Please follow
-these guidelines:
-
-1. **Fork the repository** and create a feature branch
-2. **Make your changes** with clear commit messages
-3. **Add tests** for new functionality
-4. **Update documentation** as needed
-5. **Submit a pull request** with a clear description
-
-### Code Style
-
-Follow the code style established in the upstream project.
-Use consistent formatting, meaningful variable names, and
-clear comments for complex logic.
-
-### Reporting Issues
-
-When reporting issues, please include:
-
-- Operating system and version
-- Project version or commit hash
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Relevant log output
+13. Change: Payment form: Given and Change background/text contrast poor. Now uses skin settings
+14. Change: Sales screen Product button default background image reduced
 
 ## License
 
-**Overlay license:** Anticommons 0.1.0
-**Upstream license:** MIT
+Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
 
-This project is distributed under the MIT license.
-The Anticloud overlay is licensed under Anticommons 0.1.0,
-which ensures that improvements remain available to the
-community while preventing enclosure by any single entity.
+## Verification
 
-## Upstream
-
-**SHA-256:** pending resolution
-
-The upstream project is pinned to the above commit hash
-to ensure reproducible builds and verifiable provenance.
-
-## Benchmarks
-
-Benchmark results are recorded in BENCH.json.
-
-Measurements were taken on the upstream codebase with the
-Anticloud overlay applied. Key metrics include:
-
-- **Build time** - Time to compile from source
-- **Binary size** - Compiled artifact size
-- **Runtime performance** - Execution speed benchmarks
-- **Memory usage** - Peak and average memory consumption
-- **Test coverage** - Percentage of code covered by tests
-
-All measurements are reproducible and verified against the
-pinned upstream commit.
-
-## Additional Information
-
-This project is part of the Anticloud ecosystem, providing
-SUPERMARKETS functionality with measured performance characteristics.
-
-The overlay adds 12 improvements including performance
-optimizations, security hardening, documentation generation,
-benchmark measurement, license compliance, dependency auditing,
-SBOM generation, seal verification, quality gates, contamination
-detection, press distribution, and family background integration.
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| DANS (KNAW/NWO, Netherlands) | 10.17026/PT | EU-recognised archive |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
-
-
-
-## Press and Independent Publication
-
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe
-and Mail, Business Insider, National Post, Financial Post, StreetInsider,
-Digital Journal, Barchart, International Business Times, and Fox News.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
-
+Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
