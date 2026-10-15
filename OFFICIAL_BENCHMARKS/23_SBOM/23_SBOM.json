@@ -1,0 +1,16 @@
+{
+ "framework": "23_SBOM",
+ "title": "NTIA SBOM minimum elements / CycloneDX 1.5",
+ "project": "UNICENTA",
+ "basis": [
+  {
+   "check": "04_sbom_cyclonedx",
+   "status": "PASS",
+   "observed": "{\"components\": 272, \"components_with_licence\": 265, \"compone"
+  }
+ ],
+ "verdict": "CONTROLS EVIDENCED \u2014 all basis checks PASS",
+ "pax_provenance": "Run ID loiskleinner/pax-benchmark-runner v3, 2026-10-02, Kaggle T4 x2 (2x 16GB VRAM), Ubuntu 22.04, Python 3.12. These are PAX L5 Narrow L2 General 27B model-level results \u2014 shared model component, not this project's verdict.",
+ "bench_sha3": "e26f488ceff04caa1bdaf526a4be0286ce5015ed2f537f90f6d3ee384c42bb34",
+ "register_sha3": "343157eac3f6ae2f758343b2a44de0ce31792e58a3e1021a8990e007e2a41293"
+}

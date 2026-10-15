@@ -1,0 +1,21 @@
+{
+ "framework": "12_CMMC_2",
+ "title": "CMMC 2.0 Level 2 (NIST SP 800-171)",
+ "project": "UNICENTA",
+ "basis": [
+  {
+   "check": "10_nist_sp_800_53",
+   "status": "PASS",
+   "observed": "{\"authority\": \"NIST\", \"control_ids\": [\"AC-3(2)\", \"AC-6(7)\", "
+  },
+  {
+   "check": "05_git_health",
+   "status": "PASS",
+   "observed": "{\"branch\": \"main\", \"commits\": 1, \"gitignore_present\": true, "
+  }
+ ],
+ "verdict": "CONTROLS EVIDENCED \u2014 all basis checks PASS",
+ "pax_provenance": "Run ID loiskleinner/pax-benchmark-runner v3, 2026-10-02, Kaggle T4 x2 (2x 16GB VRAM), Ubuntu 22.04, Python 3.12. These are PAX L5 Narrow L2 General 27B model-level results \u2014 shared model component, not this project's verdict.",
+ "bench_sha3": "e26f488ceff04caa1bdaf526a4be0286ce5015ed2f537f90f6d3ee384c42bb34",
+ "register_sha3": "343157eac3f6ae2f758343b2a44de0ce31792e58a3e1021a8990e007e2a41293"
+}
