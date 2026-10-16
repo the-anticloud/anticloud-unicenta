@@ -1,14 +1,12 @@
 # UNICENTA
 
-> **A simple ERP system for small businesses - still growing and improving**
+> Reference: uniCenta.com Author: Jack Gerrard v3.81 Is a direct replacement for v3.80 - Apache Derby database driver rolled-back to 10.10
 
-**Category:** POS_SYSTEMS · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/shyamsitaula/samarium · **Pinned commit:** `9514fcadb867e83f271a7d2dfb2f7f940ba9724c` · **Vendor:** Anticloud FZ LLE
-
-> **Note:** this package vendors `https://github.com/shyamsitaula/samarium` as the implementation for the `UNICENTA` slot. The vendored repository name differs from the package name; the pin above is the exact commit vendored here.
+**Category:** POS_SYSTEMS · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/herbiehp/unicenta · **Pinned commit:** `0367f011ef5820505805646f4146e782ee11fee5` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Is
 
-**A simple ERP system for small businesses - still growing and improving**
+Reference: uniCenta.com Author: Jack Gerrard v3.81 Is a direct replacement for v3.80 - Apache Derby database driver rolled-back to 10.10
 
 This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
@@ -62,7 +60,7 @@ The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The 
 SHA3-256 of `BENCH.json`:
 
 ```
-51529f550146003bb7113974a0cd4fed63d104011af08fd171eaf0232e8831d0
+ce8482658963de1614c5c6a3342b06d2cb367033f9704b5d01171c35b4155ccc
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.

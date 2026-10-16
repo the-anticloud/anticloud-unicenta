@@ -2,13 +2,11 @@
  "schema": "anticloud.tier-bench/1",
  "project": "UNICENTA",
  "source": {
-  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\POS_SYSTEMS\\UNICENTA\\UPSTREAM_CLONE",
   "git": {
-   "head": "9514fcadb867e83f271a7d2dfb2f7f940ba9724c",
-   "url": "https://github.com/shyamsitaula/samarium",
-   "branch": "main",
-   "committed_at": "",
-   "sha_verified_from": "GitHub API substitute swap 2026-10-12"
+   "url": "https://github.com/herbiehp/unicenta",
+   "head": "0367f011ef5820505805646f4146e782ee11fee5",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/shyamsitaula/samarium"
   }
  },
  "metrics": {
