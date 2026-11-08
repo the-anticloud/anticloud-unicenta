@@ -177,5 +177,8 @@
  "failed": 0,
  "failed_ids": [],
  "superseded_by_duplicate": true,
- "blocker": "no upstream source on disk: UPSTREAM_CLONE and UPSTREAM both empty/missing; nothing to measure; clone blocked or license-blocked"
+ "blocker": "no upstream source on disk: UPSTREAM_CLONE and UPSTREAM both empty/missing; nothing to measure; clone blocked or license-blocked",
+ "method": "not applicable (doc-only/design/government/media)",
+ "total": 0,
+ "all_passed_note": "unmeasured: no benchmark rows on disk; not passed by inference"
 }
